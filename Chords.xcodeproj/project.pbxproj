@@ -11,7 +11,7 @@
 		C727711C22596E7300F970F7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C727711B22596E7300F970F7 /* GameScene.sks */; };
 		C727711E22596E7300F970F7 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C727711D22596E7300F970F7 /* Actions.sks */; };
 		C727712022596E7300F970F7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727711F22596E7300F970F7 /* GameScene.swift */; };
-		C727712222596E7300F970F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727712122596E7300F970F7 /* ViewController.swift */; };
+		C727712222596E7300F970F7 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727712122596E7300F970F7 /* AppViewController.swift */; };
 		C727712422596E7500F970F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C727712322596E7500F970F7 /* Assets.xcassets */; };
 		C727712722596E7500F970F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C727712522596E7500F970F7 /* Main.storyboard */; };
 		C727713322596E7500F970F7 /* ChordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727713222596E7500F970F7 /* ChordsTests.swift */; };
@@ -58,7 +58,7 @@
 		C727711B22596E7300F970F7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C727711D22596E7300F970F7 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C727711F22596E7300F970F7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		C727712122596E7300F970F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C727712122596E7300F970F7 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		C727712322596E7500F970F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C727712622596E7500F970F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C727712822596E7500F970F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				C727711B22596E7300F970F7 /* GameScene.sks */,
 				C727711D22596E7300F970F7 /* Actions.sks */,
 				C727711F22596E7300F970F7 /* GameScene.swift */,
-				C727712122596E7300F970F7 /* ViewController.swift */,
+				C727712122596E7300F970F7 /* AppViewController.swift */,
 				C727712322596E7500F970F7 /* Assets.xcassets */,
 				C727712522596E7500F970F7 /* Main.storyboard */,
 				C727712822596E7500F970F7 /* Info.plist */,
@@ -343,7 +343,7 @@
 				C727715E22596F2D00F970F7 /* GuitarChord.swift in Sources */,
 				C727716422596F2D00F970F7 /* ChordError.swift in Sources */,
 				C727716022596F2D00F970F7 /* GuitarFretboard.swift in Sources */,
-				C727712222596E7300F970F7 /* ViewController.swift in Sources */,
+				C727712222596E7300F970F7 /* AppViewController.swift in Sources */,
 				C727716522596F2D00F970F7 /* NoteError.swift in Sources */,
 				C727716922596FF200F970F7 /* Regex.swift in Sources */,
 				C727715B22596F2D00F970F7 /* Chord.swift in Sources */,

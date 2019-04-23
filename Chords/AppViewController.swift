@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AppViewController.swift
 //  Chords
 //
 //  Created by Fredrik on 4/7/19.
@@ -10,8 +10,7 @@ import Cocoa
 import SpriteKit
 import GameplayKit
 
-class ViewController: NSViewController {
-
+class AppViewController: NSViewController {
     @IBOutlet var skView: SKView!
     
     override func viewDidLoad() {
@@ -28,9 +27,6 @@ class ViewController: NSViewController {
             }
             
             view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
         }
     }
 }
