@@ -32,6 +32,7 @@
 		C727716B2259719B00F970F7 /* CollectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727716A2259719B00F970F7 /* CollectionUtils.swift */; };
 		C727716D226FA2A700F970F7 /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727716C226FA2A600F970F7 /* MathUtils.swift */; };
 		C727716F226FA2E100F970F7 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727716E226FA2E100F970F7 /* StringUtils.swift */; };
+		C7277171226FB17100F970F7 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7277170226FB17100F970F7 /* Vec2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		C727716A2259719B00F970F7 /* CollectionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionUtils.swift; sourceTree = "<group>"; };
 		C727716C226FA2A600F970F7 /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
 		C727716E226FA2E100F970F7 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		C7277170226FB17100F970F7 /* Vec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				C727716C226FA2A600F970F7 /* MathUtils.swift */,
 				C727716822596FF200F970F7 /* Regex.swift */,
 				C727716A2259719B00F970F7 /* CollectionUtils.swift */,
+				C7277170226FB17100F970F7 /* Vec2.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				C727715D22596F2D00F970F7 /* NoteLetter.swift in Sources */,
 				C727711A22596E7300F970F7 /* AppDelegate.swift in Sources */,
 				C727716122596F2D00F970F7 /* GuitarChordRenderer.swift in Sources */,
+				C7277171226FB17100F970F7 /* Vec2.swift in Sources */,
 				C727715A22596F2D00F970F7 /* Accidental.swift in Sources */,
 				C727715C22596F2D00F970F7 /* ChordRenderer.swift in Sources */,
 			);
