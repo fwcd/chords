@@ -69,4 +69,10 @@ extension Vec2 where T == Int {
 extension Vec2 where T == Double {
     public var asPoint: CGPoint { return CGPoint(x: x, y: y) }
     public var asSize: CGSize { return CGSize(width: x, height: y) }
+    public var asVector: CGVector { return CGVector(dx: x, dy: y) }
+    
+    public init(from point: CGPoint) {
+        x = Double(point.x)
+        y = Double(point.y)
+    }
 }
