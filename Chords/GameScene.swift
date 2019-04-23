@@ -53,12 +53,12 @@ class GameScene: SKScene {
     
     private func transition(from previousNode: SKNode, to nextNode: SKNode) {
         var remainingNext = Set(nextNode.children)
-        let transitionDelay = 1.0
+        let transitionDelay = 0.3
 
         for oldChild in previousNode.children {
             if let closest = remainingNext
-                    .filter({ distance(between: oldChild, and: $0) > 0 })
-                    .min(by: { distance(between: oldChild, and: $0) < distance(between: oldChild, and: $1) }) {
+                    .filter({ fillMatches(between: oldChild, and: $0) && sizeApproximatelyMatches(between: oldChild, and: $0) })
+                    .min(by: { boundingBoxDiff(between: oldChild, and: $0) < boundingBoxDiff(between: oldChild, and: $1) }) {
                 remainingNext.remove(closest)
                 closest.isHidden = true
                 
@@ -77,6 +77,20 @@ class GameScene: SKScene {
         ]))
     }
     
+    private func fillMatches(between a: SKNode, and b: SKNode) -> Bool {
+        if let fillA = (a as? SKShapeNode)?.fillColor, let fillB = (b as? SKShapeNode)?.fillColor {
+            return fillA == fillB
+        }
+        return false
+    }
+    
+    private func sizeApproximatelyMatches(between a: SKNode, and b: SKNode) -> Bool {
+        if let boxA = (a as? SKShapeNode)?.path?.boundingBox, let boxB = (b as? SKShapeNode)?.path?.boundingBox {
+            return (boxA.width - boxB.width < 1) && (boxA.height - boxB.height < 1)
+        }
+        return false
+    }
+    
     private func delta(between a: SKNode, and b: SKNode, in node: SKNode) -> Vec2<Double> {
         return Vec2(from: b.convert(pathPosition(of: b), to: node)) - Vec2(from: a.convert(pathPosition(of: a), to: node))
     }
@@ -92,6 +106,17 @@ class GameScene: SKScene {
             }
         }
         return node.position
+    }
+    
+    private func boundingBoxDiff(between a: SKNode, and b: SKNode) -> Double {
+        if let boxA = (a as? SKShapeNode)?.path?.boundingBox, let boxB = (b as? SKShapeNode)?.path?.boundingBox {
+            let originA = Vec2(from: boxA.origin)
+            let originB = Vec2(from: boxB.origin)
+            let sizeA = Vec2(x: Double(boxA.width), y: Double(boxA.height))
+            let sizeB = Vec2(x: Double(boxB.width), y: Double(boxB.height))
+            return (originA - originB).length + (sizeA - sizeB).length
+        }
+        return 0.0
     }
     
     override func keyDown(with event: NSEvent) {
