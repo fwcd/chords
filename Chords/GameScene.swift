@@ -8,16 +8,17 @@
 
 import SpriteKit
 import GameplayKit
+import Foundation
 
 class GameScene: SKScene {
-    
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    private var label: SKLabelNode?
+    private var spinnyNode: SKShapeNode?
+    private var lastPress: Date?
     
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
+        self.label = self.childNode(withName: "//centerLabel") as? SKLabelNode
         if let label = self.label {
             label.alpha = 0.0
             label.run(SKAction.fadeIn(withDuration: 2.0))
@@ -36,7 +37,6 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
     }
-    
     
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -75,16 +75,18 @@ class GameScene: SKScene {
     }
     
     override func keyDown(with event: NSEvent) {
-        switch event.keyCode {
-        case 0x31:
-            if let label = self.label {
-                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        let secondsSinceLastPress = -(lastPress?.timeIntervalSinceNow ?? -10000)
+        
+        if let chars = event.characters {
+            if secondsSinceLastPress > 1 {
+                label?.text = chars
+            } else if let oldText = label?.text {
+                label?.text = oldText + chars
             }
-        default:
-            print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
         }
+        
+        lastPress = Date()
     }
-    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
