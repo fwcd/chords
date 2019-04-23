@@ -51,7 +51,11 @@ class GameScene: SKScene {
     override func keyDown(with event: NSEvent) {
         let secondsSinceLastPress = -(lastPress?.timeIntervalSinceNow ?? -10000)
         
-        if let chars = event.characters {
+        if event.keyCode == 51 { // backspace
+            if let oldText = label?.text {
+                update(chord: String(oldText.dropLast()))
+            }
+        } else if let chars = event.characters {
             if secondsSinceLastPress > 1 {
                 update(chord: chars)
             } else if let oldText = label?.text {
