@@ -2,10 +2,6 @@
 //  AppDelegate.swift
 //  Chords
 //
-//  Created by Fredrik on 4/7/19.
-//  Copyright © 2019 Fredrik. All rights reserved.
-//
-
 
 import Cocoa
 
